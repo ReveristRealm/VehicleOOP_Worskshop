@@ -5,13 +5,29 @@ public class Dealership {
     private String address;
     private String phone;
     private ArrayList<Vehicle> inventory;
+    private int counter = 0;
+    private int pos;
 
+
+    @Override
+    public String toString() {
+        return "Dealership{" +
+                ", number=" + pos +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", inventory=" + inventory +
+                '}';
+    }
 
     public Dealership(String name, String address, String phone){
+        counter++;
         this.name = name;
         this.address = address;
         this.phone = phone;
         this.inventory = new ArrayList<>();
+        this.pos = counter;
+
     }
     public ArrayList<Vehicle> getVehicleByPrice(int min , int max){
         ArrayList<Vehicle> showthis = new ArrayList<>();
@@ -79,4 +95,5 @@ public class Dealership {
 
         }
     }
+
 }

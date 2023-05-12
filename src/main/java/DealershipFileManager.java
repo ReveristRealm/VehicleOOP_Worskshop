@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class DealershipFileManager {
     public static void main(String[] args){}
-    public Dealership getDealerShip(){
+    public Dealership getDealerShip(int num){
        ArrayList<Dealership> allDealerships = new ArrayList<>();
         try {
             Scanner reader = new Scanner(new File("Database.csv"));
@@ -40,7 +40,7 @@ public class DealershipFileManager {
         }catch(FileNotFoundException e){
             System.out.println("File not found");
         }
-        return allDealerships.get(0);
+        return allDealerships.get(num-1);
     }
     public static void saveDealerShip(){
 
