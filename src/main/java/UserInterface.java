@@ -78,22 +78,22 @@ private Dealership dealership;
     }
 
     public void processGetByPriceRequest (double min, double max) {
-
+            displayVehicles(dealership.getVehicleByPrice(min,max));
     }
     public void processGetByMakeModelRequest (String make,String model) {
-
+            displayVehicles(dealership.getVehicleByMakeModel(make,model));
     }
     public void processGetByYearRequest (int sYear, int eYear) {
-
+            displayVehicles(dealership.getVehicleByYear(sYear,eYear));
     }
     public void processGetByColorRequest (String color) {
-
+            displayVehicles(dealership.getVehicleByColor(color));
     }
     public void processGetByMileageRequest (int min , int max) {
-
+            displayVehicles(dealership.getVehicleByMileage(min, max));
     }
     public void processGetByVehicleTypeRequest (String type) {
-
+            displayVehicles(dealership.getVehicleByType(type));
     }
     public void processGetAllVehiclesRequest () {
         displayVehicles(dealership.getAllVehicle());

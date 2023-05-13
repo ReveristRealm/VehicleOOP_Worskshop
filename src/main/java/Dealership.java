@@ -29,7 +29,7 @@ public class Dealership {
         this.pos = counter;
 
     }
-    public ArrayList<Vehicle> getVehicleByPrice(int min , int max){
+    public ArrayList<Vehicle> getVehicleByPrice(double min , double max){
         ArrayList<Vehicle> showthis = new ArrayList<>();
         for(Vehicle car : inventory){
             if(car.getPrice() > min && car.getPrice() < max ){
@@ -47,7 +47,7 @@ public class Dealership {
         }
         return showthis;
     }
-    public ArrayList<Vehicle> getVehicleByYear(int min, int max){
+    public ArrayList<Vehicle> getVehicleByYear(double min, double max){
         ArrayList<Vehicle> showthis = new ArrayList<>();
         for(Vehicle car : inventory){
             if(car.getYear() > min && car.getYear() < max){
