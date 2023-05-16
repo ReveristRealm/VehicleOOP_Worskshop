@@ -137,16 +137,10 @@ private Dealership dealership;
         dealership.addVehicle(car);
     }
     public void processRemoveVehicleRequest () {
-        Vehicle remove ;
         String filepath = "Database.csv";
         System.out.println("Enter the vin of the car you want to remove");
         int vin = Integer.parseInt(userInput.next());
-        for(Vehicle car:  dealership.getInventory()){
-            if (car.getVin() == vin){
-                remove = car;
-                dealership.removeVehicle(remove);
-            }
-        }
+        dealership.removeVehicle(vin);
         try{
             List<String> lines = Files.readAllLines(Path.of(filepath));
 

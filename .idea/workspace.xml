@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3175683b-50ef-409c-b46c-dcb7ee261353" name="Changes" comment="Finished most methods for the dealership class and slight modifications to UserInterface.">
+    <list default="true" id="3175683b-50ef-409c-b46c-dcb7ee261353" name="Changes" comment="Last Minute changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Database.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dealership.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInterface.java" afterDir="false" />
     </list>
@@ -113,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683938328648</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Last Minute changes">
+      <created>1684265749236</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684265749236</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -121,7 +129,8 @@
     <MESSAGE value="Progress" />
     <MESSAGE value="Made some changes to give user choice of Dealership" />
     <MESSAGE value="Finished most methods for the dealership class and slight modifications to UserInterface." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished most methods for the dealership class and slight modifications to UserInterface." />
+    <MESSAGE value="Last Minute changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last Minute changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
