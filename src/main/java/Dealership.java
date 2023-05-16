@@ -8,6 +8,13 @@ public class Dealership {
     private int counter = 0;
     private int pos;
 
+    public ArrayList<Vehicle> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Vehicle> inventory) {
+        this.inventory = inventory;
+    }
 
     @Override
     public String toString() {
@@ -91,9 +98,7 @@ public class Dealership {
         inventory.add(vehicle);
     }
     public void removeVehicle(Vehicle vehicle){
-        for(Vehicle car : inventory){
-
-        }
+        inventory.remove(vehicle);
     }
 
 }

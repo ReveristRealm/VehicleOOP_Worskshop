@@ -1,6 +1,12 @@
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class UserInterface {
     static Scanner userInput =  new Scanner(System.in);
@@ -21,6 +27,7 @@ private Dealership dealership;
             System.out.println("7] Get All Vehicles");
             System.out.println("8] Add a vehicle");
             System.out.println("9] Remove a vehicle");
+            System.out.println("10] Exit");
 
             int pickthis = userInput.nextInt();
             switch (pickthis){
@@ -65,6 +72,16 @@ private Dealership dealership;
                 case 7:
                     processGetAllVehiclesRequest();
                     break;
+                case 8:
+                    processAddVehicleRequest();
+                    break;
+                case 9:
+                    processRemoveVehicleRequest();
+                    break;
+                case 10:
+                return;
+                default:
+                    break;
             }
         }
     }
@@ -99,10 +116,48 @@ private Dealership dealership;
         displayVehicles(dealership.getAllVehicle());
     }
     public void processAddVehicleRequest () {
+        System.out.println("What is the vin?");
+        int vin = userInput.nextInt();
+        System.out.println("What is the year");
+        int year = userInput.nextInt();
+        System.out.println("What is the make?");
+        String make = userInput.next();
+        System.out.println("What is the model?");
+        String model = userInput.next();
+        System.out.println("What is the vehicle type?");
+        String type = userInput.next();
+        System.out.println("What is the color?");
+        String color = userInput.next();
+        System.out.println("What is the mileage?");
+        int mileage = userInput.nextInt();
+        System.out.println("What is the price");
+        double price = userInput.nextDouble();
 
+        Vehicle car = new Vehicle(vin, year, make, model, type,color,mileage, price);
+        dealership.addVehicle(car);
     }
     public void processRemoveVehicleRequest () {
+        Vehicle remove ;
+        String filepath = "Database.csv";
+        System.out.println("Enter the vin of the car you want to remove");
+        int vin = Integer.parseInt(userInput.next());
+        for(Vehicle car:  dealership.getInventory()){
+            if (car.getVin() == vin){
+                remove = car;
+                dealership.removeVehicle(remove);
+            }
+        }
+        try{
+            List<String> lines = Files.readAllLines(Path.of(filepath));
 
+            String useVin = String.valueOf(vin);
+
+            lines = lines.stream().filter(line -> !line.contains(useVin)).collect(Collectors.toList());
+
+            Files.write(Path.of(filepath), lines, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+        }catch(IOException e ){
+            System.out.println("hi");
+        }
     }
     private void displayVehicles(ArrayList<Vehicle> inventory){
         for(Vehicle cars: inventory){
