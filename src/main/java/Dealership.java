@@ -90,6 +90,7 @@ public class Dealership {
         }
         return showthis;
     }
+
     public ArrayList<Vehicle> getAllVehicle(){
         ArrayList<Vehicle> showthis = new ArrayList<>(inventory);
         return showthis;

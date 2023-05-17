@@ -38,6 +38,7 @@ public class DealershipFileManager {
                     }
             }
         }catch(FileNotFoundException e){
+
             System.out.println("File not found");
         }
         return allDealerships.get(num-1);
