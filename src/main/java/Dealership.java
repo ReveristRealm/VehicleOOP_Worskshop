@@ -94,6 +94,7 @@ public class Dealership {
         ArrayList<Vehicle> showthis = new ArrayList<>(inventory);
         return showthis;
     }
+
     public void addVehicle(Vehicle vehicle){
         inventory.add(vehicle);
     }
