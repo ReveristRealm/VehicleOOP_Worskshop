@@ -85,7 +85,6 @@ private Dealership dealership;
             }
         }
     }
-
     private void inIt(){
         System.out.println("What dealership would you like to go to");
         System.out.println("1)Los Santos Customs");
